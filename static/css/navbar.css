@@ -1,0 +1,102 @@
+#navbar {
+    width: 100%;
+    min-width: 1000px; /*Size of Largest element on page */
+    height: 30px;
+    position: fixed;
+    box-shadow: 0px 0px 5pt 2pt black; 
+    background: -moz-linear-gradient(top,  #45484d 0%, #000000 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#45484d), color-stop(100%,#000000));
+    background: -webkit-linear-gradient(top,  #45484d 0%,#000000 100%);
+    background: -o-linear-gradient(top,  #45484d 0%,#000000 100%);
+    background: -ms-linear-gradient(top,  #45484d 0%,#000000 100%);
+    background: linear-gradient(to bottom,  #45484d 0%,#000000 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 );
+    margin: 0;
+    padding: 0;
+    /*overflow-y: auto;*/
+    z-index: 100;
+}
+
+#navbar ul {
+    width: 100%;
+    height: 100%;
+    line-height: 200%;
+    /*display: inline-block;*/
+    margin: 0;
+    padding: 0;
+}
+
+#navbar li {
+    color: whitesmoke;
+    float: left;
+    margin: 0px 9px;
+    padding: 0px;
+    position: relative;
+    list-style:none;
+    height: 100%;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: moz-none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#navbar li:hover {
+    text-shadow: 0px 0px 4pt #3399FF;	
+}
+
+#navbar ul li a {
+    color:whitesmoke;
+    text-decoration:none;
+    font-family:'open sans';
+}
+
+#navbar ul li ul {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    list-style: none;
+    box-shadow: 0px 0px 5pt 2pt black; 
+    background: #000;
+    width: auto;
+    min-width: inherit;
+    height: auto;
+    top: 30px;
+    border: 1px solid #3399FF;
+    border-top: none;
+    z-index: 11;
+    transition: opacity .5s linear;
+    -webkit-transition: opacity .5s linear;
+}
+
+#navbar ul li:hover ul {
+    visibility: visible;
+    opacity: .8;
+    display: block;
+    text-shadow: none;
+}
+
+#navbar ul li ul:hover {
+    visibility: visible;
+    opacity: .8;
+    display: block;
+    text-shadow: none;
+}
+
+#navbar ul li ul li {
+    float: none;
+    display: block;
+    margin: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    transition: font-size .3s ease-in-out;
+    -webkit-transition: font-size .3s ease-in-out;
+}
+
+#navbar ul li ul li:hover {
+    /*opacity: .5;*/
+    font-size: 150%;
+    /*background-color: #3399FF;*/
+}
